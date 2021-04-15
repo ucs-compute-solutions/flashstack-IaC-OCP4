@@ -1,0 +1,8 @@
+---
+- name: FlashStack Configuration | FlashArray
+  include_tasks:
+    file: "SetupPure.yaml"
+  vars:
+    url: "{{ fa_url }}"
+    api: "{{ fa_api }}"
+  no_log: True

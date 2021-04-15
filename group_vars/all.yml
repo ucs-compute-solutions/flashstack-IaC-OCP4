@@ -1,0 +1,74 @@
+#
+#This is the list of all the VLANs that will be defined on Nexus, UCS and OCP
+#
+# Commenting out the following two variables will skip the iSCSI and/or FC configurations
+configure_iscsi: "yes"
+#configure_fc: "yes"
+#configure_nfs: "yes"
+#
+
+# Uncomment and update the the following line to setup Timezone
+time_zone: 'America/New_York'
+
+# VLAN Names are adjustable and can be modified in here
+#
+native_vlan_name: 'Native-Vlan' # Native VLAN
+baremetal_vlan_name: 'OCP-Baremetal' # Baremetal Management VLAN
+provisioning_vlan_name: 'OCP-Provisioning' # VLAN to carry provisioning traffic
+vm_traffic_vlan_name: 'OCP-VM-Traffic' # VLAN for VM management interfaces
+iscsiA_vlan_name: 'OCP-Persistent-iSCSI-A' # iSCSI-A VLAN for Persistent Storage 
+iscsiB_vlan_name: 'OCP-Persistent-iSCSI-B' # iSCSI-B VLAN for Persistent Storage
+# lan_state should be set to 'present' to configure the objects
+# In future, this parameter will be used for deleting the configuration
+#
+lan_state : 'present'
+#
+vlan_list:
+  - name: "{{ native_vlan_name }}"
+    id: '2'
+    native: 'yes'
+    state: "{{lan_state}}"
+    to_storage: 'no'
+    storage_protocol: 'none'
+  - name: "{{ baremetal_vlan_name }}"
+    id: '115'
+    native: 'no'
+    state: "{{lan_state}}"
+    to_storage: 'yes'
+    storage_protocol: 'none'
+  - name: "{{ provisioning_vlan_name }}"
+    id: '1101'
+    native: 'no'
+    state: "{{lan_state}}"
+    to_storage: 'no'
+    storage_protocol: 'none'
+  - name: "{{ vm_traffic_vlan_name }}"
+    id: '15'
+    native: 'no'
+    state: "{{lan_state}}"
+    to_storage: 'no'
+    storage_protocol: 'none'
+  - name: "{{ iscsiA_vlan_name }}"
+    id: '901'
+    native: 'no'
+    state: "{{lan_state}}"
+    to_storage: 'yes'
+    storage_protocol: 'iSCSI'
+  - name: "{{ iscsiB_vlan_name }}"
+    id: '902'
+    native: 'no'
+    state: "{{lan_state}}"
+    to_storage: 'yes'
+    storage_protocol: 'iSCSI'
+#
+# VLANs definition below will be used to setup trunk ports on Nexus Switches
+# all_vlans_list: for vpc_peer_link and UCS FI trunk ports
+all_vlans_list: "15,115,1101,901,902"
+# storage_vlans_list: for storage ports
+storage_vlans_list: "901,902"
+# mgmt_vlans_list: for management switch trunk port
+mgmt_vlans_list: "15,115"
+#
+iscsi_vlan_a: "901"
+iscsi_vlan_b: "902"
+native_vlan_id: "2"
