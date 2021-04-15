@@ -1,4 +1,8 @@
-# ConfigCI
- This is repository for all CI related functions
- So far only Nexus and UCS portions are in sync (for the most part)
- Next step is to bring in the MDS configuration into repository
+# FlashStack automation code for OCP4 deployment 
+ This repository is for FlashStack automated deployment covering the following:
+ 1. Cisco UCS
+ 2. Cisco Nexus
+ 3. Pure FlashArray//X R3
+
+
+
