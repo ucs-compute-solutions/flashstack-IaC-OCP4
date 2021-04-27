@@ -9,6 +9,8 @@
 This repository contains Ansible playbooks to configure Cisco Nexus, Cisco UCS, Pure FlashArray to prepare the bare-metal infrastructure for OCP4 installation. This repository can be used for setting up Cisco devices as well as Pure FlashArray as covered in following Cisco Validated Design (CVD):
 URL
 
+![image](https://user-images.githubusercontent.com/3585414/116255002-d566e280-a73f-11eb-86f5-d61c4ea4edf5.png)
+
  
 The first three steps illustrated above to deploy FlashStack infrastructure is covered in this repository.
 
@@ -17,8 +19,6 @@ OpenShift IPI automated installation is not part of this repo and the IPI instal
 All the details of deploying the FlashStack along with OpenShift Container Platform 4 IPI automated installation is covered in the above mentioned CVD. Refer the document for detailed instructions on how to execute the Ansible Playbooks to bring up the OpenShift Container Platform environment delivered a Infrastructure as Code (IaC).
 
 
-
-![image](https://user-images.githubusercontent.com/3585414/116254434-5671aa00-a73f-11eb-9ee0-4b96e9656cf3.png)
 
 
 
