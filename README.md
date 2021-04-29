@@ -20,7 +20,7 @@ OpenShift IPI automated installation is not part of this repo and the IPI instal
 All the details of deploying the FlashStack along with OpenShift Container Platform 4 IPI automated installation is covered in the above mentioned CVD. Refer the document for detailed instructions on how to execute the Ansible Playbooks to bring up the OpenShift Container Platform environment delivered a Infrastructure as Code (IaC).
 
 
-### Playbook Execution Commands – Summary
+### Playbook Execution Commands – Summary:
 Setup all the variables before executing the playbooks as detailed in the CVD “”
 
 1.	Setup LAN on Nexus and UCS: "ansible-playbook ./Setup_LAN_Connectivity.yml -i inventory"
