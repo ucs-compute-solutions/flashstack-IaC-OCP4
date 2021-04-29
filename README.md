@@ -17,7 +17,7 @@ The first three steps illustrated above to deploy FlashStack infrastructure is c
 OpenShift IPI automated installation is not part of this repo and the IPI installation repo is available at https://github.com/openshift-kni/baremetal-deploy/tree/master/ansible-ipi-install.
 
 ## Usage:
-All the details of deploying the FlashStack along with OpenShift Container Platform 4 IPI automated installation is covered in the above mentioned CVD. Refer the document for detailed instructions on how to execute the Ansible Playbooks to bring up the OpenShift Container Platform environment delivered a Infrastructure as Code (IaC).
+All the details of deploying the FlashStack along with OpenShift Container Platform 4 IPI automated installation is covered in the above mentioned CVD. Refer the document for detailed instructions on how to execute the Ansible Playbooks to bring up the OpenShift Container Platform environment delivered as Infrastructure as Code (IaC).
 
 
 ### Playbook Execution Commands – Summary:
