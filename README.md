@@ -21,7 +21,7 @@ All the details of deploying the FlashStack along with OpenShift Container Platf
 
 
 ### Playbook Execution Commands – Summary:
-Setup all the variables before executing the playbooks as detailed in the CVD “https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flashstack_redhat-OCP.html”
+Setup all the variables before executing the playbooks as detailed in the CVD: “https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flashstack_redhat-OCP.html”
 
 1.	Setup LAN on Nexus and UCS: "ansible-playbook ./Setup_LAN_Connectivity.yml -i inventory"
 2.	Setup Cisco UCS: "ansible-playbook ./Setup_UCS.yml -i inventory"
