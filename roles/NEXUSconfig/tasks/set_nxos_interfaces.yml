@@ -19,6 +19,8 @@
             vlan: "{{ iscsi_vlan }}"
     with_list: "{{ storage_interface_list }}"
 
+# This task adds ports to the peer-link port-channels
+  - name: Add Ports to peer-link Port-Channel
     cisco.nxos.nxos_lag_interfaces:
       config:
         - name: "{{ peerlink_PC[0].interface }}"
